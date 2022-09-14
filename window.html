@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objetc window</title>
+</head>
+<body>
+    <form>
+        <input type="bottom" value="open" onclick="abrir()">
+        <input type="bottom" value="alert" onclick="mostraralerta()">
+        <input type="bottom" value="confirm" onclick="confirmar()">
+        <input type="bottom" value="prompt" onclick="cargarcadena()">
+    </form>
+    <script>
+        function abrir(){
+            let ventana=open();
+            ventana.document.write("Estoy escribieno en la nueva ventana");
+            ventana.document.write("Estoy escribieno en la segunda ventana");
+
+        }
+        function mostraralerta(){
+            alert ("Esta ventana ya la hemos visitdo en potras clases");
+        }
+        function confirmar(){
+            let respuesta=confirm("Presiona alguno de los botones")
+            if(respuesta==true)
+            alert("presiona aceprtar");
+            elsealert("Presiona cancelar");
+        }
+        function cargarcadena(){
+            let carg = prompt("Escriba un texto")
+            alert ("Usted ingresó más cargo");
+
+        }
+/* propiedades del objeto screen*/
+document.write ("avallweight: "+screen.availWeight+"<br>");
+document.write ("avallwidth: "+screen.availWidth+"<br>");
+document.write ("height: "+screen.Height+"<br>");
+document.write ("width: "+screen.Width+"<br>");
+document.write ("colorDepth: "+screen.colorDepth+"<br>");
+/* propiedades del navegador*/
+document.write ("appName: "+navigator.appName+"<br>");
+document.write ("appVersion: "+navigator.appVersion+"<br>");
+document.write ("cookieEnabled: "+navigator.cookieEnabled+"<br>");
+document.write ("complementos: "+navigator.plugins+"<br>");
+
+
+
+    </script>
+</body>
+</html>
